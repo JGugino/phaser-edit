@@ -10,23 +10,43 @@
 		<link rel="stylesheet" href="./styles/home.css" />
 	</head>
 	<body>
-		<div class="flex flex-hor phaser-edit-container">
-			<div class="left-panel">
-				<p>Left Panel</p>
+		<div class="flex flex-col phaser-edit-container">
+			<div class="flex flex-hor action-bar">
+				<a href="./pages/add.html" class="action-button">Add</a>
+				<a href="./pages/assets.html" class="action-button" id="assets-button"
+					>Assets</a
+				>
+				<a href="./pages/build.html" class="action-button" id="build-button"
+					>Build</a
+				>
+				<a
+					href="./pages/settings.html"
+					class="action-button"
+					id="settings-button"
+					>Settings</a
+				>
 			</div>
-			<div class="flex flex-col center-panel">
-				<div class="game-view">
-					<h3>Game View</h3>
+			<div class="flex flex-hor top-panels">
+				<div class="left-panel">
+					<h3 class="panel-header">Scene</h3>
+					<div class="scene-list"></div>
 				</div>
-				<div class="bottom-panel">
-					<p>Bottom Panel</p>
+				<div class="right-panel">
+					<h3 class="panel-header">Inspector</h3>
 				</div>
 			</div>
-			<div class="right-panel">
-				<p>Right Panel</p>
+			<div class="bottom-panel">
+				<div class="bottom-panel-tabs">
+					<button>New Tab</button>
+				</div>
+				<div class="bottom-panel-content">
+					<div class="console-content">
+						<p>Console Content</p>
+					</div>
+				</div>
 			</div>
 		</div>
-		<p class="info"></p>
+		<script src="./scripts/home_controller.js"></script>
 		<script src="./scripts/electron_renderer.js"></script>
 	</body>
 </html>
